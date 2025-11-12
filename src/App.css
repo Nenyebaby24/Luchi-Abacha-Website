@@ -1,0 +1,273 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #a30d2d;
+  padding: 15px 10%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo{
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.nav-icons a.whatsapp {
+  color: rgb(28, 230, 28);
+  font-size: 20px;
+  margin-left: 10px;
+}
+.nav-icons a.envelope {
+  color: #fff;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 80px 10%;
+  background: #fff;
+}
+
+.hero-content  {
+  flex: 1 1 400px;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #a30d2d;
+}
+
+.hero-image img {
+  max-width: 100%;           /* keeps full width */
+  height: auto;      /* 👈 reduce height here */
+  object-fit: cover;    /* trims top/bottom nicely without stretching */
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.hero-buttons{
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.cta-btn {
+  background: #a30d2d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-right: 10px;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cta-btn.secondary {
+  border: 2px solid rgb(28, 224, 28);
+  background: transparent;
+  color: rgb(28, 224, 28);
+}
+
+.contact-section {
+  padding: 80px 10%;
+  background: #fff4f6;
+  text-align: center;
+}
+.contact-section h2 {
+  color: #a30d2d;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.contact-section form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-section input, .contact-section textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.cta-button {
+  background: transparent;
+  border: 2px solid rgb(18, 238, 18);
+  color: rgb(14, 224, 14);
+  padding: 10px 20px;
+  border-radius: 6px;
+ 
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.footer {
+  background: #a30d2d;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-icons a.whatsapp{
+  color: rgb(28, 235, 28);
+  font-size: 24px;
+  margin: 0 10px;
+}
+.footer-icons a.envelope {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.services-section {
+  padding: 60px 10%;
+  background: #ffffff;
+  text-align: center;
+}
+
+.services-section h2 {
+  color: #a30d2d;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.services-intro {
+  color: #444;
+  margin-bottom: 30px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: #fff4f6;
+  border-radius: 12px;
+  padding: 22px;
+  width: 280px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-icon {
+  font-size: 28px;
+  color: #a30d2d;
+}
+
+.about-section {
+  padding: 60px 10%;
+  background: #fff4f6;
+  color: #222;
+}
+
+.about-inner {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1 1 420px;
+  text-align: left;
+  min-width: 280px;
+}
+
+.about-text h2 {
+  color: #a30d2d;
+  margin-bottom: 12px;
+  font-size: 1.9rem;
+  
+  
+}
+
+.about-text p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.about-image {
+  flex: 1 1 320px;
+  text-align: right;
+  min-width: 220px;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .about-image { text-align: center; }
+  .about-text { text-align: center; }
+
+  .menu-toggle {
+    display: block;
+    color: #fff;
+  }
+}
+
+
+/* responsive */
+@media (max-width: 900px) {
+  .service-cards {
+    gap: 14px;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 520px;
+  }
+}
+
+
