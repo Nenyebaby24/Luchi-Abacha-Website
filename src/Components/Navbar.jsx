@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
-
+import logo from "../assets/logo.jpg"; // 👈 adjust the path based on your folder structure
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="navbar">
-      <div className="logo">Luchi Special Abacha</div>
+      {/* Logo image */}
+      <div className="logo">
+        <img src={logo} alt="Luchi Special Abacha Logo" className="logo-img" />
+      </div>
 
       {/* Hamburger icon */}
       <div

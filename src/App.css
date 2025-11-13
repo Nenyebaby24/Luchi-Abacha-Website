@@ -19,6 +19,17 @@ html {
   font-weight: bold;
 }
 
+.logo-img {
+  height: 55px; /* adjust as needed */
+  width: auto;
+  border-radius: 8px; /* optional – gives rounded edges */
+  object-fit: contain;
+  cursor: pointer;
+}
+.logo-img:hover{
+  opacity: 0.8;
+}
+
 /* Nav links (desktop) */
 .nav-links {
   display: flex;
@@ -43,6 +54,15 @@ html {
   color: white;
   margin-left: 10px;
   font-size: 1.2rem;
+}
+
+.nav-icons a:hover {
+  color: #ddd;
+  cursor: pointer;
+}
+
+.nav-icons a.whatsapp{
+  color: rgb(28, 224, 28);
 }
 
 /* Hamburger menu (hidden on desktop) */
@@ -258,6 +278,26 @@ html {
   box-shadow: 0 6px 18px rgba(0,0,0,0.07);
 }
 
+.backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #a30d2d; /* Your Luchi brand color */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.backToTop:hover {
+  background-color: #ff69b4; /* soft pink hover */
+  transform: scale(1.1);
+}
+
 /* responsive */
 @media (max-width: 900px) {
  .menu-toggle {
@@ -300,7 +340,7 @@ html {
 
   /* Hide nav-icons on mobile if desired */
   .nav-icons {
-    display: none;
+    display: flex;
   }
   .service-cards {
     gap: 14px;
@@ -310,7 +350,16 @@ html {
     width: 100%;
     max-width: 520px;
   }
+ 
+  .backToTop {
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    padding: 8px 10px;
+  }
 }
+
+
 
 @media (max-width: 768px) {
  .menu-toggle {
@@ -353,7 +402,7 @@ html {
 
   /* Hide nav-icons on mobile if desired */
   .nav-icons {
-    display: none;
+    display: flex;
   }
     
   
@@ -370,7 +419,16 @@ html {
     display: block;
     color: #fff;
   }
+
+
+  .backToTop {
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    padding: 8px 10px;
+  }
 }
+
 @media (max-width: 468px){
     .menu-toggle {
     display: flex;
@@ -412,7 +470,7 @@ html {
 
   /* Hide nav-icons on mobile if desired */
   .nav-icons {
-    display: none;
+    display: flex;
   }
   
   .about-inner {
@@ -421,6 +479,15 @@ html {
   }
   .about-image { text-align: center; }
   .about-text { text-align: center; }
+
+
+  .backToTop {
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    padding: 8px 10px;
+  }
+
 }
 
 
