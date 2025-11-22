@@ -2,87 +2,51 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Base navbar styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #a30d2d;
-  color: white;
-  padding: 15px 25px;
-  position: relative;
-  z-index: 100;
+  background: #a30d2d;
+  padding: 15px 10%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 
-.logo {
-  font-size: 1.5rem;
+.logo{
+  font-size: 1.8rem;
   font-weight: bold;
-}
-
-.logo-img {
-  height: 55px; /* adjust as needed */
-  width: auto;
-  border-radius: 8px; /* optional – gives rounded edges */
-  object-fit: contain;
+  color: #fff;
+  text-decoration: none;
   cursor: pointer;
-}
-.logo-img:hover{
-  opacity: 0.8;
-}
-
-/* Nav links (desktop) */
-.nav-links {
-  display: flex;
-  gap: 20px;
 }
 
 .nav-links a {
-  color: white;
+  margin: 0 15px;
+  color: #fff;
+  cursor: pointer;
   text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: background 0.3s;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
-.nav-links a:hover {
- 
-  cursor: pointer;
-}
-
-/* Nav icons */
-.nav-icons a {
-  color: white;
+.nav-icons a.whatsapp {
+  color: rgb(28, 230, 28);
+  font-size: 20px;
   margin-left: 10px;
-  font-size: 1.2rem;
+}
+.nav-icons a.envelope {
+  color: #fff;
+  font-size: 20px;
+  margin-left: 10px;
 }
 
-.nav-icons a:hover {
-  color: #ddd;
-  cursor: pointer;
-}
-
-.nav-icons a.whatsapp{
-  color: rgb(28, 224, 28);
-}
-
-/* Hamburger menu (hidden on desktop) */
 .menu-toggle {
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 20px;
+  font-size: 24px;
   cursor: pointer;
+  color: #fff;
 }
-
-.menu-toggle span {
-  height: 3px;
-  width: 100%;
-  background: white;
-  border-radius: 2px;
-  transition: all 0.3s;
-}
-
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -278,69 +242,18 @@ html {
   box-shadow: 0 6px 18px rgba(0,0,0,0.07);
 }
 
-.backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #a30d2d; /* Your Luchi brand color */
-  color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 10px 14px;
-  cursor: pointer;
-  font-size: 24px;
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-.backToTop:hover {
-  background-color: #ff69b4; /* soft pink hover */
-  transform: scale(1.1);
-}
-
 /* responsive */
 @media (max-width: 900px) {
- .menu-toggle {
-    display: flex;
+  .nav-icons, .nav-links {
+    display: none;
   }
-
-  .nav-links {
-    position: absolute;
-    top: 50px;
+  .navbar {
+    padding: 15px;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
     right: 0;
-    background-color: #a30d2d;
-    flex-direction: column;
-    width: 200px;
-    text-align: left;
-    padding: 20px;
-    display: none; /* hidden by default */
-  }
-
-  .nav-links.open {
-    display: flex; /* shown when hamburger is clicked */
-  }
-
-  .nav-links a {
-    padding: 10px 0;
-    cursor: pointer;
-  }
-
-  /* Animate hamburger to X */
-  .menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-
-  /* Hide nav-icons on mobile if desired */
-  .nav-icons {
-    display: flex;
+    left: 0;
   }
   .service-cards {
     gap: 14px;
@@ -350,63 +263,40 @@ html {
     width: 100%;
     max-width: 520px;
   }
- 
-  .backToTop {
-    bottom: 20px;
-    right: 20px;
-    font-size: 20px;
-    padding: 8px 10px;
-  }
 }
 
-
-
 @media (max-width: 768px) {
- .menu-toggle {
-    display: flex;
+  .nav-icons, .nav-links {
+    display: none;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    left: 0;
   }
 
   .nav-links {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-left: 0;
     position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #a30d2d;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #a30d2d;
     flex-direction: column;
-    width: 200px;
-    text-align: left;
-    padding: 20px;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
     display: none; /* hidden by default */
+    z-index: 1000;
   }
-
-  .nav-links.open {
-    display: flex; /* shown when hamburger is clicked */
-  }
-
-  .nav-links a {
-    padding: 10px 0;
-    cursor: pointer;
-  }
-
-  /* Animate hamburger to X */
-  .menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-
-  /* Hide nav-icons on mobile if desired */
-  .nav-icons {
-    display: flex;
-  }
-    
-  
-
 
   .about-inner {
     flex-direction: column-reverse;
@@ -419,58 +309,10 @@ html {
     display: block;
     color: #fff;
   }
-
-
-  .backToTop {
-    bottom: 20px;
-    right: 20px;
-    font-size: 20px;
-    padding: 8px 10px;
-  }
 }
-
 @media (max-width: 468px){
-    .menu-toggle {
-    display: flex;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: #a30d2d;
-    flex-direction: column;
-    width: 200px;
-    text-align: left;
-    padding: 20px;
-    display: none; /* hidden by default */
-  }
-
-  .nav-links.open {
-    display: flex; /* shown when hamburger is clicked */
-  }
-
-  .nav-links a {
-    padding: 10px 0;
-    cursor: pointer;
-  }
-
-  /* Animate hamburger to X */
-  .menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-
-  /* Hide nav-icons on mobile if desired */
-  .nav-icons {
-    display: flex;
+ .nav-icons, .nav-links {
+    display: none;
   }
   
   .about-inner {
@@ -480,13 +322,41 @@ html {
   .about-image { text-align: center; }
   .about-text { text-align: center; }
 
-
-  .backToTop {
-    bottom: 20px;
-    right: 20px;
-    font-size: 20px;
-    padding: 8px 10px;
+  .menu-toggle {
+    display: block;
+    color: #fff;
   }
+
+  .navbar {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-left: 0;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #a30d2d;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    display: none; /* hidden by default */
+    z-index: 1000;
+  }
+
 
 }
 

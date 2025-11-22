@@ -13,7 +13,8 @@ function App() {
     <>
       {/* BACK TO PORTFOLIO BUTTON — add your real portfolio URL */}
       <a
-        href="https://your-portfolio-url.com"
+        href="https://https://https://portfolio-ten-virid-57.vercel.app/" 
+        target="_self"
         style={{
           display: "inline-block",
           margin: "20px",
