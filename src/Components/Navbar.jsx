@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import logo from "../assets/logo.jpg"; // adjust path
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -12,6 +12,9 @@ const Navbar = () => {
       <div className="logo">
         <img src={logo} alt="Luchi Special Abacha Logo" className="logo-img" />
       </div>
+
+      {/* Back to Portfolio button passed from App.jsx */}
+      {props.children}
 
       {/* Hamburger icon */}
       <div

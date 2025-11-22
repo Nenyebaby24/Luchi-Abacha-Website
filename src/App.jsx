@@ -11,8 +11,8 @@ import "./App.css";
 function App() {
   return (
     <>
-      {/* BACK TO PORTFOLIO BUTTON */}
-      <div className="back-portfolio-container">
+      <Navbar>
+        {/* Back to Portfolio button inside Navbar */}
         <a
           href="https://portfolio-ten-virid-57.vercel.app/"
           target="_self"
@@ -20,9 +20,8 @@ function App() {
         >
           ← Back to Portfolio
         </a>
-      </div>
-
-      <Navbar />
+      </Navbar>
+      
       <Hero />
       <About />
       <Services />
@@ -34,5 +33,6 @@ function App() {
 }
 
 export default App;
+
 
 
