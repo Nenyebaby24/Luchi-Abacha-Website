@@ -5,20 +5,38 @@ import About from "./Components/About";
 import Services from "./Components/Services";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+import BackToTopButton from "./Components/BackToTopButton";
 import "./App.css";
 
 function App() {
   return (
     <>
+      {/* BACK TO PORTFOLIO BUTTON — add your real portfolio URL */}
+      <a
+        href="https://your-portfolio-url.com"
+        style={{
+          display: "inline-block",
+          margin: "20px",
+          textDecoration: "none",
+          fontSize: "18px",
+          fontWeight: "bold",
+          color: "#000"
+        }}
+      >
+        ← Back to Portfolio
+      </a>
+
       <Navbar />
       <Hero />
       <About />
       <Services />
       <Contact />
       <Footer />
+      <BackToTopButton />
     </>
   );
 }
 
 export default App;
+
 
