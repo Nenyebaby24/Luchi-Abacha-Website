@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
-import logo from "../assets/logo.jpg"; // 👈 adjust the path based on your folder structure
+import logo from "../assets/logo.jpg"; // adjust path
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="navbar">
-      {/* Logo image */}
+      {/* Logo */}
       <div className="logo">
         <img src={logo} alt="Luchi Special Abacha Logo" className="logo-img" />
       </div>
@@ -25,16 +25,53 @@ const Navbar = () => {
 
       {/* Navigation Links */}
       <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <Link to="home" smooth duration={600} onClick={() => setMenuOpen(false)}>Home</Link>
-        <Link to="about" smooth duration={600} onClick={() => setMenuOpen(false)}>About</Link>
-        <Link to="services" smooth duration={600} onClick={() => setMenuOpen(false)}>Services</Link>
-        <Link to="contact" smooth duration={600} onClick={() => setMenuOpen(false)}>Contact</Link>
+        <Link
+          to="home"
+          smooth
+          duration={600}
+          onClick={() => setMenuOpen(false)}
+        >
+          Home
+        </Link>
+        <Link
+          to="about"
+          smooth
+          duration={600}
+          onClick={() => setMenuOpen(false)}
+        >
+          About
+        </Link>
+        <Link
+          to="services"
+          smooth
+          duration={600}
+          onClick={() => setMenuOpen(false)}
+        >
+          Services
+        </Link>
+        <Link
+          to="contact"
+          smooth
+          duration={600}
+          onClick={() => setMenuOpen(false)}
+        >
+          Contact
+        </Link>
       </div>
 
       {/* Social Icons */}
       <div className="nav-icons">
-        <a href="mailto:udooluchi16@gmail.com" className="envelope"><FaEnvelope /></a>
-        <a href="https://wa.me/2348066120541" target="_blank" rel="noreferrer" className="whatsapp"><FaWhatsapp /></a>
+        <a href="mailto:udooluchi16@gmail.com" className="envelope">
+          <FaEnvelope />
+        </a>
+        <a
+          href="https://wa.me/2348066120541"
+          target="_blank"
+          rel="noreferrer"
+          className="whatsapp"
+        >
+          <FaWhatsapp />
+        </a>
       </div>
     </nav>
   );

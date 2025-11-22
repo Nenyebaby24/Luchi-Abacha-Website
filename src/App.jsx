@@ -11,21 +11,16 @@ import "./App.css";
 function App() {
   return (
     <>
-      {/* BACK TO PORTFOLIO BUTTON — add your real portfolio URL */}
-      <a
-        href="https://https://https://portfolio-ten-virid-57.vercel.app/" 
-        target="_self"
-        style={{
-          display: "inline-block",
-          margin: "20px",
-          textDecoration: "none",
-          fontSize: "18px",
-          fontWeight: "bold",
-          color: "#000"
-        }}
-      >
-        ← Back to Portfolio
-      </a>
+      {/* BACK TO PORTFOLIO BUTTON */}
+      <div className="back-portfolio-container">
+        <a
+          href="https://portfolio-ten-virid-57.vercel.app/"
+          target="_self"
+          className="back-portfolio-btn"
+        >
+          ← Back to Portfolio
+        </a>
+      </div>
 
       <Navbar />
       <Hero />
